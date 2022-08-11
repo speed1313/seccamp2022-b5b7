@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # ignore me
-openssl genpkey -algorithm ed25519 -outform PEM -out testkey.pem
+openssl genpkey -algorithm rsa -outform PEM -out testkey.pem
 openssl pkey -in testkey.pem -pubout > testpub.pem
 
 # 本質

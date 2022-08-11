@@ -19,7 +19,7 @@ jobs:
         with:
           registry: ghcr.io
           # Suppose that your repository is located at https://github.com/<X>/<Y>, this value should be equal to X
-          username: lmt-swallow
+          username: speed1313
           password: ${{ github.token }}
 
       # TODO: add cosign-installer etc.
@@ -35,6 +35,6 @@ jobs:
           file: ./Dockerfile
           # Suppose that your repository is located at https://github.com/<X>/<Y>, this value should be equal to ghcr.io/<X>/<random value>:latest
           tags: |
-            ghcr.io/lmt-swallow/test-image:latest
+            ghcr.io/speed1313/test-image:latest
           platforms: linux/amd64
           push: true
