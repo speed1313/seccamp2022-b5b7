@@ -38,3 +38,12 @@ jobs:
             ghcr.io/speed1313/test-image:latest
           platforms: linux/amd64
           push: true
+      - name: Sign the container image
+        env:
+          COSIGN_EXPERIMENTAL: "true"
+        run: cosign sign --force ghcr.io/speed1313/test-image:latest
+
+      - name: Verify the container image
+        env:
+          COSIGN_EXPERIMENTAL: "true"
+        run: cosign verify ghcr.io/speed1313/test-image:latest
